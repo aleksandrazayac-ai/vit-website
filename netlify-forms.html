@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Netlify Forms — служебная страница</title>
+</head>
+<body>
+  <!--
+    Netlify сканирует HTML при деплое и регистрирует форму.
+    Фактическая форма подгружается через components.js на страницах сайта.
+  -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact">
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="tel" name="phone">
+    <input type="text" name="service">
+    <textarea name="message"></textarea>
+    <input type="text" name="bot-field">
+  </form>
+</body>
+</html>

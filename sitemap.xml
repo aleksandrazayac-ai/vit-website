@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Замените https://vit-ltd.ru на ваш домен после публикации -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://vit-ltd.ru/pages/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/cases.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/blog.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/contacts.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/retail.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/wholesale.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/cafe.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/production.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/construction.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/mining.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/service-its.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/service-1cbo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/service-otchetnost.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/service-customize.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/service-kkt.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vit-ltd.ru/pages/service-fresh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

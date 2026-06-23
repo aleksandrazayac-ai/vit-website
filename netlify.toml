@@ -1,0 +1,43 @@
+# Конфигурация деплоя на Netlify
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+  # Статический сайт — сборка не требуется
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Главная страница без /pages/ в URL (опционально, корневой index.html тоже редиректит)
+[[redirects]]
+  from = "/"
+  to = "/pages/index.html"
+  status = 200
+
+# Страница успешной отправки формы Netlify (если не используется AJAX)
+[[redirects]]
+  from = "/thanks"
+  to = "/pages/contacts.html"
+  status = 200
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

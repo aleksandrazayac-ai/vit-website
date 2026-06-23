@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <!-- 0@80=B 2: A>2@5<5==0O C?@>IQ==0O 25@A8O  35><5B@8G5A:89 7=0: + 3>@87>=B0;L=K9 wordmark -->
+  <rect x="4" y="8" width="32" height="32" rx="8" fill="#2563EB"/>
+  <path d="M14 30V18h3.2l2.5 6.2L22.2 18H25v12h-2.6v-5.8l-2.4 5.8h-1.6l-2.4-5.8V30H14z" fill="#fff"/>
+  <text x="46" y="31" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="700" letter-spacing="0.04em" fill="#0F172A">"</text>
+  <text x="46" y="42" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="8" font-weight="500" letter-spacing="0.08em" fill="#64748B">$ &+ "%</text>
+</svg>

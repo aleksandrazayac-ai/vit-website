@@ -1,0 +1,53 @@
+<form id="contact-form" name="contact" class="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="contact">
+  <p class="sr-only" aria-hidden="true">
+    <label>Не заполняйте это поле: <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+  </p>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name" class="form-label">Имя <span class="form-required">*</span></label>
+      <input type="text" id="name" name="name" class="form-input" placeholder="Как к вам обращаться" autocomplete="name" required>
+      <span class="form-error" aria-live="polite"></span>
+    </div>
+    <div class="form-group">
+      <label for="phone" class="form-label">Телефон</label>
+      <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+      <span class="form-error" aria-live="polite"></span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email" class="form-label">Email <span class="form-required">*</span></label>
+    <input type="email" id="email" name="email" class="form-input" placeholder="email@company.ru" autocomplete="email" required>
+    <span class="form-error" aria-live="polite"></span>
+  </div>
+  <div class="form-group">
+    <label for="service" class="form-label">Интересующая услуга</label>
+    <select id="service" name="service" class="form-input form-select">
+      <option value="">Выберите услугу или отрасль</option>
+      <optgroup label="Отрасли">
+        <option value="retail">Розничная торговля</option>
+        <option value="wholesale">Оптовая торговля</option>
+        <option value="cafe">Общепит и рестораны</option>
+        <option value="production">Производство</option>
+        <option value="construction">Строительство</option>
+        <option value="mining">Добывающая промышленность</option>
+      </optgroup>
+      <optgroup label="Услуги">
+        <option value="its">Сопровождение 1С (ИТС)</option>
+        <option value="1cbo">1С:БухОбслуживание</option>
+        <option value="otchetnost">1С-Отчётность</option>
+        <option value="customize">Настройка и внедрение</option>
+        <option value="kkt">Настройка торгового оборудования</option>
+        <option value="fresh">1С:Фреш</option>
+        <option value="other">Другое</option>
+      </optgroup>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="message" class="form-label">Сообщение <span class="form-required">*</span></label>
+    <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Опишите задачу или задайте вопрос" required></textarea>
+    <span class="form-error" aria-live="polite"></span>
+  </div>
+  <p class="form-note">Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.</p>
+  <button type="submit" class="btn btn--primary btn--lg">Отправить заявку</button>
+</form>
