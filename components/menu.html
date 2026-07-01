@@ -1,6 +1,27 @@
 <nav class="nav" aria-label="Основная навигация">
   <ul class="nav__list">
     <li><a href="{{PAGES}}index.html" class="nav__link" data-nav="home">Главная</a></li>
+    <li><a href="{{PAGES}}about.html" class="nav__link" data-nav="about">О компании</a></li>
+    <li class="nav__item--dropdown">
+      <a href="{{PAGES}}services.html" class="nav__link" data-nav="services">Услуги</a>
+      <ul class="nav__dropdown">
+        <li><a href="{{PAGES}}service-its.html" class="nav__dropdown-link">Обслуживание и сопровождение 1С</a></li>
+        <li><a href="{{PAGES}}line-consulting.html" class="nav__dropdown-link">Линия консультаций</a></li>
+        <li><a href="{{PAGES}}service-customize.html" class="nav__dropdown-link">Внедрение 1С</a></li>
+        <li><a href="{{PAGES}}service-1cbo.html" class="nav__dropdown-link">Бухгалтерское обслуживание</a></li>
+        <li><a href="{{PAGES}}norma-service.html" class="nav__dropdown-link">Norma CS</a></li>
+        <li><a href="{{PAGES}}service-kkt.html" class="nav__dropdown-link">Сопровождение ККТ</a></li>
+      </ul>
+    </li>
+    <li class="nav__item--dropdown">
+      <a href="{{PAGES}}catalog-programs.html" class="nav__link" data-nav="products">Продукты</a>
+      <ul class="nav__dropdown">
+        <li><a href="{{PAGES}}catalog-programs.html" class="nav__dropdown-link">Программы 1С</a></li>
+        <li><a href="{{PAGES}}catalog-services.html" class="nav__dropdown-link">Сервисы 1С</a></li>
+        <li><a href="{{PAGES}}product-norma.html" class="nav__dropdown-link">Norma CS</a></li>
+        <li><a href="{{PAGES}}product-kkt.html" class="nav__dropdown-link">ККТ и торговое оборудование</a></li>
+      </ul>
+    </li>
     <li class="nav__item--dropdown">
       <a href="{{PAGES}}index.html#industries" class="nav__link" data-nav="industries">Отрасли</a>
       <ul class="nav__dropdown">
@@ -12,20 +33,7 @@
         <li><a href="{{PAGES}}mining.html" class="nav__dropdown-link">Добывающая промышленность</a></li>
       </ul>
     </li>
-    <li><a href="{{PAGES}}about.html" class="nav__link" data-nav="about">О компании</a></li>
-    <li class="nav__item--dropdown">
-      <a href="{{PAGES}}services.html" class="nav__link" data-nav="services">Услуги</a>
-      <ul class="nav__dropdown">
-        <li><a href="{{PAGES}}service-its.html" class="nav__dropdown-link">Сопровождение 1С (ИТС)</a></li>
-        <li><a href="{{PAGES}}service-1cbo.html" class="nav__dropdown-link">1С:БухОбслуживание</a></li>
-        <li><a href="{{PAGES}}service-otchetnost.html" class="nav__dropdown-link">1С-Отчётность</a></li>
-        <li><a href="{{PAGES}}service-customize.html" class="nav__dropdown-link">Настройка и внедрение</a></li>
-        <li><a href="{{PAGES}}service-kkt.html" class="nav__dropdown-link">Настройка торгового оборудования</a></li>
-        <li><a href="{{PAGES}}service-fresh.html" class="nav__dropdown-link">1С:Фреш</a></li>
-      </ul>
-    </li>
-    <li><a href="{{PAGES}}cases.html" class="nav__link" data-nav="cases">Кейсы</a></li>
-    <li><a href="{{PAGES}}blog.html" class="nav__link" data-nav="blog">Блог</a></li>
+    <li><a href="{{PAGES}}blog.html" class="nav__link" data-nav="blog">Новости</a></li>
     <li><a href="{{PAGES}}contacts.html" class="nav__link" data-nav="contacts">Контакты</a></li>
   </ul>
 </nav>
@@ -33,6 +41,23 @@
 <div class="mobile-menu" aria-hidden="true">
   <ul class="mobile-menu__list">
     <li><a href="{{PAGES}}index.html" class="mobile-menu__link" data-nav="home">Главная</a></li>
+    <li><a href="{{PAGES}}about.html" class="mobile-menu__link" data-nav="about">О компании</a></li>
+    <li><a href="{{PAGES}}services.html" class="mobile-menu__link" data-nav="services">Услуги</a></li>
+    <li class="mobile-menu__sub">
+      <a href="{{PAGES}}service-its.html" class="mobile-menu__link mobile-menu__link--sub">Обслуживание и сопровождение 1С</a>
+      <a href="{{PAGES}}line-consulting.html" class="mobile-menu__link mobile-menu__link--sub">Линия консультаций</a>
+      <a href="{{PAGES}}service-customize.html" class="mobile-menu__link mobile-menu__link--sub">Внедрение 1С</a>
+      <a href="{{PAGES}}service-1cbo.html" class="mobile-menu__link mobile-menu__link--sub">Бухгалтерское обслуживание</a>
+      <a href="{{PAGES}}norma-service.html" class="mobile-menu__link mobile-menu__link--sub">Norma CS</a>
+      <a href="{{PAGES}}service-kkt.html" class="mobile-menu__link mobile-menu__link--sub">Сопровождение ККТ</a>
+    </li>
+    <li><a href="{{PAGES}}catalog-programs.html" class="mobile-menu__link" data-nav="products">Продукты</a></li>
+    <li class="mobile-menu__sub">
+      <a href="{{PAGES}}catalog-programs.html" class="mobile-menu__link mobile-menu__link--sub">Программы 1С</a>
+      <a href="{{PAGES}}catalog-services.html" class="mobile-menu__link mobile-menu__link--sub">Сервисы 1С</a>
+      <a href="{{PAGES}}product-norma.html" class="mobile-menu__link mobile-menu__link--sub">Norma CS</a>
+      <a href="{{PAGES}}product-kkt.html" class="mobile-menu__link mobile-menu__link--sub">ККТ и торговое оборудование</a>
+    </li>
     <li><a href="{{PAGES}}index.html#industries" class="mobile-menu__link" data-nav="industries">Отрасли</a></li>
     <li class="mobile-menu__sub">
       <a href="{{PAGES}}retail.html" class="mobile-menu__link mobile-menu__link--sub">Розничная торговля</a>
@@ -42,18 +67,7 @@
       <a href="{{PAGES}}construction.html" class="mobile-menu__link mobile-menu__link--sub">Строительство</a>
       <a href="{{PAGES}}mining.html" class="mobile-menu__link mobile-menu__link--sub">Добывающая промышленность</a>
     </li>
-    <li><a href="{{PAGES}}about.html" class="mobile-menu__link" data-nav="about">О компании</a></li>
-    <li><a href="{{PAGES}}services.html" class="mobile-menu__link" data-nav="services">Услуги</a></li>
-    <li class="mobile-menu__sub">
-      <a href="{{PAGES}}service-its.html" class="mobile-menu__link mobile-menu__link--sub">Сопровождение 1С (ИТС)</a>
-      <a href="{{PAGES}}service-1cbo.html" class="mobile-menu__link mobile-menu__link--sub">1С:БухОбслуживание</a>
-      <a href="{{PAGES}}service-otchetnost.html" class="mobile-menu__link mobile-menu__link--sub">1С-Отчётность</a>
-      <a href="{{PAGES}}service-customize.html" class="mobile-menu__link mobile-menu__link--sub">Настройка и внедрение</a>
-      <a href="{{PAGES}}service-kkt.html" class="mobile-menu__link mobile-menu__link--sub">Настройка ККТ</a>
-      <a href="{{PAGES}}service-fresh.html" class="mobile-menu__link mobile-menu__link--sub">1С:Фреш</a>
-    </li>
-    <li><a href="{{PAGES}}cases.html" class="mobile-menu__link" data-nav="cases">Кейсы</a></li>
-    <li><a href="{{PAGES}}blog.html" class="mobile-menu__link" data-nav="blog">Блог</a></li>
+    <li><a href="{{PAGES}}blog.html" class="mobile-menu__link" data-nav="blog">Новости</a></li>
     <li><a href="{{PAGES}}contacts.html" class="mobile-menu__link" data-nav="contacts">Контакты</a></li>
   </ul>
   <div class="mobile-menu__actions">
