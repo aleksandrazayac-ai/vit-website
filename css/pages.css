@@ -2507,7 +2507,14 @@
   line-height: var(--line-height-relaxed);
 }
 
-.its-tariff-ladder {
+.section--its-tariffs {
+  background: linear-gradient(180deg, rgb(37 99 235 / 0.06) 0%, var(--color-bg-alt) 48%, var(--color-bg-alt) 100%);
+  border-top: 1px solid rgb(37 99 235 / 0.08);
+  border-bottom: 1px solid rgb(37 99 235 / 0.08);
+}
+
+.its-tariff-ladder,
+.its-tariff-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
@@ -2515,20 +2522,31 @@
 }
 
 @media (min-width: 768px) {
-  .its-tariff-ladder {
-    grid-template-columns: repeat(2, 1fr);
+  .its-tariff-ladder,
+  .its-tariff-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-6) var(--space-5);
   }
 }
 
-@media (min-width: 1200px) {
-  .its-tariff-ladder {
-    grid-template-columns: repeat(4, 1fr);
+@media (min-width: 1024px) {
+  .its-tariff-ladder,
+  .its-tariff-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1280px) {
+  .its-tariff-ladder,
+  .its-tariff-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--space-5);
   }
 }
 
-.its-tariff {
+.its-tariff,
+.its-tariff-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2542,7 +2560,8 @@
     border-color var(--transition-base);
 }
 
-.its-tariff:hover {
+.its-tariff:hover,
+.its-tariff-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgb(15 23 42 / 0.07);
 }
@@ -2676,7 +2695,15 @@
   background: rgb(30 64 175 / 0.12);
 }
 
-.its-tariff__name {
+.its-tariff__icon svg {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.its-tariff__name,
+.its-tariff-card__name {
   margin: 0 0 var(--space-2);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
@@ -2961,11 +2988,6 @@
 
 .section--its-muted {
   background: var(--color-bg-alt);
-}
-
-.section--its-tariffs {
-  background: linear-gradient(180deg, rgb(37 99 235 / 0.06) 0%, var(--color-bg-alt) 48%, var(--color-bg-alt) 100%);
-  border-block: 1px solid rgb(37 99 235 / 0.08);
 }
 
 .page-hero__hint {
