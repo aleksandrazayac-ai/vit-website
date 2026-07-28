@@ -7,260 +7,406 @@
   <title>Программы 1С:Предприятие | ВИТ</title>
   <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/page-programs.css">
 </head>
-<body data-root="../" data-pages="" data-nav="products">
+<body class="programs-page" data-root="../" data-pages="" data-nav="products">
 
   <div id="site-header"></div>
 
   <main class="main">
 
-    <section class="page-hero">
-      <div class="container">
-        <nav class="breadcrumbs" aria-label="Хлебные крошки">
-          <a href="index.html">Главная</a><span>/</span><span aria-current="page">Программы 1С</span>
-        </nav>
-        <h1 class="page-hero__title">Программы 1С:Предприятие</h1>
-        <p class="page-hero__desc">Официальная поставка лицензий «1С:Предприятие 8» с подбором конфигурации, установкой и сопровождением от партнёра 1С:Франчайзи в Южно-Сахалинске.</p>
-        <div class="page-hero__actions">
-          <a href="contacts.html?service=programs" class="btn btn--primary btn--lg">Подобрать программу</a>
-          <a href="#catalog" class="btn btn--secondary btn--lg">Каталог решений</a>
+    <section class="programs-hero">
+      <div class="programs-container">
+        <div class="programs-hero__grid">
+          <div class="programs-hero__content reveal">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+              <a href="index.html">Главная</a><span>/</span><span aria-current="page">Программы 1С</span>
+            </nav>
+            <h1 class="programs-hero__title">Программы 1С:Предприятие</h1>
+            <p class="programs-hero__desc">Официальная поставка лицензий «1С:Предприятие 8» с подбором конфигурации, установкой и сопровождением от партнёра 1С:Франчайзи в Южно-Сахалинске.</p>
+            <div class="programs-hero__actions">
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--lg">Подобрать программу</a>
+              <a href="#catalog" class="btn btn--secondary btn--lg">Каталог решений</a>
+            </div>
+            <p class="programs-hero__trust">Официальный партнёр 1С · Более 20 лет на Сахалине</p>
+          </div>
+          <div class="programs-hero__visual reveal" aria-hidden="true">
+            <div class="programs-hero__glow"></div>
+            <span class="programs-hero__float programs-hero__float--1">Бухгалтерия</span>
+            <span class="programs-hero__float programs-hero__float--2">Торговля</span>
+            <span class="programs-hero__float programs-hero__float--3">Зарплата</span>
+            <img src="../assets/images/hero-automation.png" alt="" width="1536" height="1024" loading="lazy" decoding="async">
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--its-plain">
-      <div class="container content-block reveal">
-        <h2 class="section__title">Что такое программы 1С</h2>
-        <p>Программы «1С:Предприятие» — это прикладные решения на единой платформе для учёта, управления и отчётности. Одна организация может работать в одной конфигурации или связать несколько программ: например, торговлю и бухгалтерию, производство и зарплату.</p>
-        <p>ВИТ поставляет те конфигурации, с которыми работают клиенты компании: от учёта ИП и малого бизнеса до ERP, отраслевых решений и облачного сервиса 1С:Фреш. Лицензии оформляются официально; при необходимости помогаем с установкой, переносом данных и <a href="service-its.html">сопровождением</a>.</p>
-      </div>
-    </section>
-
-    <section class="section section--its-muted" id="catalog">
-      <div class="container">
-        <div class="its-section-head reveal">
-          <span class="section__label">Каталог</span>
-          <h2 class="section__title">Программы, которые поставляет ВИТ</h2>
-          <p class="section__desc">Ниже — конфигурации, упомянутые в материалах сайта и отраслевых решениях компании. Если нужной программы нет в списке, уточните возможность поставки у специалиста.</p>
-        </div>
-
-        <div class="catalog-group reveal">
-          <h3 class="catalog-group__title">Учёт и управление организацией</h3>
-          <div class="catalog-grid">
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Бухгалтерия 8</h3>
-              <p class="catalog-card__lead">Регламентированный бухгалтерский и налоговый учёт, первичные документы и отчётность для российских организаций и ИП.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> бухгалтерии, ИП и компаниям, которым нужен надёжный учёт без сложной логистики или производства.</p>
-              <ul class="catalog-card__features">
-                <li>учёт по ПБУ и НК РФ, типовые операции и отчёты;</li>
-                <li>подготовка деклараций и регламентированной отчётности;</li>
-                <li>интеграция с <a href="service-otchetnost.html">1С-Отчётностью</a> и другими сервисами 1С;</li>
-                <li>по запросу — редакция КОРП для крупных организаций.</li>
-              </ul>
-              <a href="contacts.html?service=programs" class="btn btn--secondary btn--sm">Получить консультацию</a>
+    <section class="programs-section programs-intro">
+      <div class="programs-container">
+        <div class="programs-intro__grid reveal">
+          <div class="programs-prose">
+            <span class="programs-section__eyebrow">Платформа 1С</span>
+            <h2 class="programs-section__title">Что такое программы 1С</h2>
+            <p class="programs-section__lead">«1С:Предприятие» — прикладные решения на единой платформе для учёта, управления и отчётности. Можно работать в одной конфигурации или связать несколько программ — торговлю и бухгалтерию, производство и зарплату.</p>
+            <p class="programs-section__lead" style="margin-top: 16px;">ВИТ поставляет конфигурации, с которыми работают клиенты компании: от учёта ИП до ERP и облачного сервиса 1С:Фреш. Лицензии оформляются официально, при необходимости помогаем с установкой и <a href="service-its.html">сопровождением</a>.</p>
+          </div>
+          <div class="programs-intro__cards">
+            <article class="programs-intro-card programs-intro-card--blue">
+              <div class="programs-intro-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h10M4 18h14"/></svg>
+              </div>
+              <h3>Учёт</h3>
+              <p>Бухгалтерия, первичные документы, регламентированная отчётность и контроль финансов в одной системе.</p>
             </article>
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Управление нашей фирмой</h3>
-              <p class="catalog-card__lead">Управленческий и оперативный учёт для малого бизнеса: продажи, закупки, деньги, CRM и базовая отчётность в одной программе.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> небольшим компаниям и ИП, которым нужен простой учёт без развёрнутой ERP.</p>
-              <ul class="catalog-card__features">
-                <li>заказы, счета, склад и взаиморасчёты;</li>
-                <li>аналитика по направлениям и менеджерам;</li>
-                <li>обмен с бухгалтерией при совместном использовании с «1С:Бухгалтерия»;</li>
-                <li>доступ в облаке в рамках <a href="service-1cbo.html">1С:БухОбслуживания</a>.</li>
-              </ul>
-              <a href="service-1cbo.html" class="btn btn--secondary btn--sm">Подробнее об облачном учёте</a>
+            <article class="programs-intro-card programs-intro-card--green">
+              <div class="programs-intro-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+              </div>
+              <h3>Автоматизация</h3>
+              <p>Склад, продажи, производство и кадры — процессы компании в связанных модулях без ручного дублирования.</p>
             </article>
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Зарплата и управление персоналом 8</h3>
-              <p class="catalog-card__lead">Кадровый учёт, расчёт зарплаты, больничных и отпусков, регламентированные формы для ФНС и СФР.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> организациям с штатом от нескольких человек до крупных HR-служб.</p>
-              <ul class="catalog-card__features">
-                <li>штатное расписание, приказы, табель, расчёт начислений;</li>
-                <li>отчётность по взносам и персонифицированным сведениям;</li>
-                <li>обмен с бухгалтерией и производственными конфигурациями;</li>
-                <li>редакция КОРП — для холдингов и сложной структуры персонала.</li>
-              </ul>
-              <a href="contacts.html?service=programs" class="btn btn--secondary btn--sm">Получить консультацию</a>
+            <article class="programs-intro-card programs-intro-card--sand">
+              <div class="programs-intro-card__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 18V8l6-4 6 4v10"/><path d="M9 18v-6h6v6"/></svg>
+              </div>
+              <h3>Отчётность</h3>
+              <p>Декларации и формы для ФНС и СФР, интеграция с <a href="service-otchetnost.html">1С-Отчётностью</a> и сервисами фирмы «1С».</p>
             </article>
           </div>
         </div>
-
-        <div class="catalog-group reveal">
-          <h3 class="catalog-group__title">Торговля и общепит</h3>
-          <div class="catalog-grid">
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Управление торговлей 8</h3>
-              <p class="catalog-card__lead">Оптовые и смешанные продажи: закупки, склад, цены, логистика, CRM и контроль дебиторской задолженности.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> оптовым компаниям, дистрибьюторам и торговым подразделениям производственных фирм.</p>
-              <ul class="catalog-card__features">
-                <li>складской учёт, резервы и отгрузки;</li>
-                <li>гибкое ценообразование и скидки;</li>
-                <li>аналитика продаж и закупок;</li>
-                <li>связка с бухгалтерией и ERP при росте компании.</li>
-              </ul>
-              <a href="wholesale.html" class="btn btn--secondary btn--sm">Пример для опта</a>
-            </article>
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Розница 8</h3>
-              <p class="catalog-card__lead">Кассовая программа для магазинов и торговых сетей: продажи, остатки, маркировка и работа по 54-ФЗ.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> розничным точкам, сетям и форматам с несколькими кассами.</p>
-              <ul class="catalog-card__features">
-                <li>продажи на ККТ, смены и отчёты кассира;</li>
-                <li>учёт номенклатуры и остатков по магазинам;</li>
-                <li>поддержка маркировки и специализированных сценариев;</li>
-                <li>обмен с центральной базой и бухгалтерией.</li>
-              </ul>
-              <a href="retail.html" class="btn btn--secondary btn--sm">Пример для розницы</a>
-            </article>
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Общепит</h3>
-              <p class="catalog-card__lead">Отраслевое решение для ресторанов, кафе и столовых: меню, технологические карты, списание продуктов и учёт выручки.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> заведениям общепита с залом, доставкой или комбинированным форматом.</p>
-              <ul class="catalog-card__features">
-                <li>учёт блюд, полуфабрикатов и ингредиентов;</li>
-                <li>контроль себестоимости и остатков на кухне;</li>
-                <li>интеграция с кассой и бухгалтерией;</li>
-                <li>отраслевые отчёты для управленца.</li>
-              </ul>
-              <a href="cafe.html" class="btn btn--secondary btn--sm">Решение для общепита</a>
-            </article>
-          </div>
-        </div>
-
-        <div class="catalog-group reveal">
-          <h3 class="catalog-group__title">Производство и крупный бизнес</h3>
-          <div class="catalog-grid">
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:ERP Управление предприятием</h3>
-              <p class="catalog-card__lead">Единая система для крупного и среднего бизнеса: финансы, производство, закупки, продажи, бюджетирование и управленческий учёт.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> производственным и торговым компаниям с разветвлённой структурой и потребностью в сквозной аналитике.</p>
-              <ul class="catalog-card__features">
-                <li>сквозные процессы от заявки до отгрузки и закрытия периода;</li>
-                <li>планирование и калькуляция в связке с производством;</li>
-                <li>многоорганизационный учёт и сложные регламенты;</li>
-                <li>масштабирование без смены платформы.</li>
-              </ul>
-              <a href="production.html" class="btn btn--secondary btn--sm">Пример для производства</a>
-            </article>
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Управление производственным предприятием</h3>
-              <p class="catalog-card__lead">Комплексная автоматизация производства: планирование выпуска, учёт материалов, себестоимость и взаимодействие со сбытом.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> заводам и цехам, где ключевой процесс — выпуск продукции и контроль ресурсов.</p>
-              <ul class="catalog-card__features">
-                <li>заказы на производство и маршруты;</li>
-                <li>нормативная калькуляция и фактическая себестоимость;</li>
-                <li>склад сырья и готовой продукции;</li>
-                <li>переход на ERP при росте требований к управлению.</li>
-              </ul>
-              <a href="contacts.html?service=programs" class="btn btn--secondary btn--sm">Получить консультацию</a>
-            </article>
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Документооборот</h3>
-              <p class="catalog-card__lead">Электронный документооборот и согласование внутренних документов компании с привязкой к учётным системам 1С.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> организациям с развитым делопроизводством, оптом и холдингами с регламентами согласования.</p>
-              <ul class="catalog-card__features">
-                <li>маршруты согласования и контроль сроков;</li>
-                <li>хранение версий и поиск по архиву;</li>
-                <li>связь с договорами и первичными документами учёта;</li>
-                <li>снижение бумажного оборота.</li>
-              </ul>
-              <a href="wholesale.html" class="btn btn--secondary btn--sm">Сценарий для опта</a>
-            </article>
-          </div>
-        </div>
-
-        <div class="catalog-group reveal">
-          <h3 class="catalog-group__title">Отраслевые решения и облако</h3>
-          <div class="catalog-grid">
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Управление строительной организацией</h3>
-              <p class="catalog-card__lead">Специализированный учёт для строителей: объекты, сметы, подрядные работы, материалы и финансовый результат по проектам.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> строительным и подрядным организациям, проектным подразделениям с учётом по объектам.</p>
-              <ul class="catalog-card__features">
-                <li>учёт по стройкам и этапам работ;</li>
-                <li>сметная и фактическая стоимость;</li>
-                <li>снабжение объектов и взаиморасчёты с субподрядчиками;</li>
-                <li>сочетание с «1С:Бухгалтерия» и торговыми конфигурациями.</li>
-              </ul>
-              <a href="construction.html" class="btn btn--secondary btn--sm">Решение для строительства</a>
-            </article>
-            <article class="card catalog-card service-card">
-              <h3 class="card__title">1С:Фреш</h3>
-              <p class="catalog-card__lead">Облачная 1С: программы работают в дата-центре фирмы «1С», обновления и резервное копирование выполняются автоматически.</p>
-              <p class="catalog-card__for"><strong>Кому подходит:</strong> компаниям с удалёнными офисами, филиалами на Сахалине и материке или без собственного сервера.</p>
-              <ul class="catalog-card__features">
-                <li>доступ через браузер или тонкий клиент;</li>
-                <li>типовые конфигурации без установки на каждый ПК;</li>
-                <li>регулярные обновления платформы и прикладных решений;</li>
-                <li>подключение сервисов 1С в рамках тарифа.</li>
-              </ul>
-              <a href="service-fresh.html" class="btn btn--secondary btn--sm">Подробнее о 1С:Фреш</a>
-            </article>
-          </div>
-        </div>
-
-        <p class="support-info-note reveal" style="margin-top: var(--space-10);">Norma CS и торговое оборудование (ККТ) поставляются отдельно — см. разделы <a href="product-norma.html">Norma CS</a> и <a href="service-kkt.html">ККТ</a>. Полный коммерческий перечень лицензий уточняйте у менеджера ВИТ.</p>
       </div>
     </section>
 
-    <section class="section section--its-plain">
-      <div class="container">
-        <h2 class="industry-section__title reveal">Почему покупать 1С у официального партнёра</h2>
-        <div class="advantage-list reveal">
-          <article class="advantage-item">
-            <h3>Легальные лицензии</h3>
-            <p>Оформление через 1С:Франчайзи — корректная регистрация, обновления и доступ к официальной поддержке.</p>
+    <section class="programs-section programs-popular">
+      <div class="programs-container reveal">
+        <span class="programs-section__eyebrow" style="color: #93c5fd;">Выбор клиентов</span>
+        <h2 class="programs-section__title">Популярные решения для бизнеса</h2>
+        <p class="programs-section__lead">Три конфигурации, с которых чаще всего начинают автоматизацию на Сахалине.</p>
+        <div class="programs-popular__grid">
+          <article class="programs-popular-card">
+            <div class="programs-popular-card__badge" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10h8M8 14h5"/></svg>
+            </div>
+            <h3>1С:Бухгалтерия 8</h3>
+            <p>Регламентированный учёт и налоги для организаций и ИП — надёжная база для бухгалтерии.</p>
+            <a href="contacts.html?service=programs" class="btn btn--secondary btn--sm">Подобрать</a>
           </article>
-          <article class="advantage-item">
-            <h3>Подбор под отрасль</h3>
-            <p>Ориентируемся на задачи клиентов ВИТ: торговля, производство, строительство, общепит, добыча и услуги.</p>
+          <article class="programs-popular-card">
+            <div class="programs-popular-card__badge" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+            </div>
+            <h3>1С:Управление торговлей 8</h3>
+            <p>Опт, склад, цены и CRM — для компаний, где ключевой процесс — продажи и логистика.</p>
+            <a href="wholesale.html" class="btn btn--secondary btn--sm">Пример для опта</a>
           </article>
-          <article class="advantage-item">
-            <h3>Внедрение и сопровождение</h3>
-            <p>Установка, перенос данных, настройка и <a href="service-its.html">договор ИТС</a> — в одной компании, без поиска подрядчиков.</p>
-          </article>
-          <article class="advantage-item">
-            <h3>Локальный офис</h3>
-            <p>Южно-Сахалинск: консультации, выезд и связь с бухгалтером без ожидания из другого региона.</p>
+          <article class="programs-popular-card">
+            <div class="programs-popular-card__badge" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3"/><path d="M6 20v-1a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v1"/></svg>
+            </div>
+            <h3>1С:Зарплата и управление персоналом 8</h3>
+            <p>Кадры, начисления и отчётность по взносам — для организаций с штатом от нескольких человек.</p>
+            <a href="contacts.html?service=programs" class="btn btn--secondary btn--sm">Подобрать</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--its-accent">
-      <div class="container">
-        <div class="its-section-head reveal">
-          <span class="section__label">Подбор</span>
-          <h2 class="section__title">Как выбрать программу 1С</h2>
+    <section class="programs-section programs-catalog" id="catalog">
+      <div class="programs-container">
+        <div class="reveal">
+          <span class="programs-section__eyebrow">Каталог</span>
+          <h2 class="programs-section__title">Программы, которые поставляет ВИТ</h2>
+          <p class="programs-section__lead">Конфигурации из материалов сайта и отраслевых решений компании. Нет нужной программы — уточните у специалиста.</p>
         </div>
-        <div class="its-flow-steps reveal">
-          <article class="its-flow-step">
-            <p class="its-flow-step__text">Опишите отрасль, число пользователей и текущий учёт.</p>
-          </article>
-          <article class="its-flow-step">
-            <p class="its-flow-step__text">Специалист уточнит процессы: склад, производство, кадры, несколько юрлиц.</p>
-          </article>
-          <article class="its-flow-step">
-            <p class="its-flow-step__text">Предложим конфигурацию: коробка, клиент-сервер или 1С:Фреш.</p>
-          </article>
-          <article class="its-flow-step">
-            <p class="its-flow-step__text">Рассчитаем лицензии и работы по внедрению.</p>
-          </article>
-          <article class="its-flow-step">
-            <p class="its-flow-step__text">При необходимости подключим ИТС и сервисы из <a href="catalog-services.html">каталога сервисов 1С</a>.</p>
-          </article>
-          <article class="its-flow-step">
-            <p class="its-flow-step__text">Запустим систему и обучим ключевых пользователей.</p>
-          </article>
+
+        <div class="programs-filters reveal" role="tablist" aria-label="Фильтр программ">
+          <button type="button" class="programs-filters__btn is-active" data-filter="all">Все</button>
+          <button type="button" class="programs-filters__btn" data-filter="accounting">Бухгалтерия</button>
+          <button type="button" class="programs-filters__btn" data-filter="trade">Торговля</button>
+          <button type="button" class="programs-filters__btn" data-filter="payroll">Зарплата</button>
+          <button type="button" class="programs-filters__btn" data-filter="production">Производство</button>
+          <button type="button" class="programs-filters__btn" data-filter="complex">Комплексные решения</button>
         </div>
-        <p class="section__desc reveal" style="margin-top: var(--space-8); max-width: 40rem;">Не уверены, нужна ли отдельная «1С:Бухгалтерия» или достаточно «Управления нашей фирмой»? Расскажите о бизнесе — сравним варианты без навязывания лишних модулей.</p>
+
+        <div class="programs-catalog__grid reveal" id="programs-grid">
+
+          <article class="program-card program-card--blue" data-categories="accounting">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></div>
+            <h3>1С:Бухгалтерия 8</h3>
+            <p class="program-card__desc">Автоматизация бухгалтерского и налогового учёта, первичные документы и отчётность.</p>
+            <div class="program-card__audience">Подходит для<span>ИП, ООО и бухгалтерских служб</span></div>
+            <ul>
+              <li>Учёт по ПБУ и НК РФ</li>
+              <li>Налоговая отчётность</li>
+              <li>Связь с 1С-Отчётностью</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="contacts.html?service=programs" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--sky" data-categories="accounting">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3L3 9v12h18V9z"/></svg></div>
+            <h3>1С:Управление нашей фирмой</h3>
+            <p class="program-card__desc">Оперативный учёт малого бизнеса: продажи, закупки, деньги и CRM в одной программе.</p>
+            <div class="program-card__audience">Подходит для<span>небольших компаний и ИП</span></div>
+            <ul>
+              <li>Заказы и взаиморасчёты</li>
+              <li>Управленческая аналитика</li>
+              <li>Облако через 1С:БухОбслуживание</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="service-1cbo.html" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--violet" data-categories="payroll">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3"/><path d="M6 20v-1a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v1"/></svg></div>
+            <h3>1С:Зарплата и управление персоналом 8</h3>
+            <p class="program-card__desc">Кадровый учёт, расчёт зарплаты и регламентированные формы для ФНС и СФР.</p>
+            <div class="program-card__audience">Подходит для<span>организаций с штатом и HR-служб</span></div>
+            <ul>
+              <li>Табель и начисления</li>
+              <li>Отчётность по взносам</li>
+              <li>Редакция КОРП для холдингов</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="contacts.html?service=programs" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--green" data-categories="trade">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18l-2 10H5L3 7z"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+            <h3>1С:Управление торговлей 8</h3>
+            <p class="program-card__desc">Оптовые продажи: закупки, склад, цены, логистика и контроль дебиторки.</p>
+            <div class="program-card__audience">Подходит для<span>опта, дистрибуции и снабжения</span></div>
+            <ul>
+              <li>Склад и отгрузки</li>
+              <li>Ценообразование</li>
+              <li>Связка с бухгалтерией и ERP</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="wholesale.html" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--sand" data-categories="trade">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a5 5 0 0 1 10 0v2"/></svg></div>
+            <h3>1С:Розница 8</h3>
+            <p class="program-card__desc">Кассовая программа для магазинов: продажи, остатки, маркировка и 54-ФЗ.</p>
+            <div class="program-card__audience">Подходит для<span>розницы и торговых сетей</span></div>
+            <ul>
+              <li>ККТ и смены</li>
+              <li>Остатки по точкам</li>
+              <li>Обмен с центральной базой</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="retail.html" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--sand" data-categories="trade">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M5 10h14l-1 10H6L5 10z"/></svg></div>
+            <h3>1С:Общепит</h3>
+            <p class="program-card__desc">Меню, технологические карты, кухня и выручка для ресторанов и кафе.</p>
+            <div class="program-card__audience">Подходит для<span>общепита и доставки</span></div>
+            <ul>
+              <li>Себестоимость блюд</li>
+              <li>Интеграция с кассой</li>
+              <li>Отраслевые отчёты</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="cafe.html" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--blue" data-categories="production complex">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V10l4-2v12M10 20V6l4-2v16M16 20V4l4-2v18"/></svg></div>
+            <h3>1С:ERP Управление предприятием</h3>
+            <p class="program-card__desc">Единая система: финансы, производство, закупки, продажи и аналитика.</p>
+            <div class="program-card__audience">Подходит для<span>среднего и крупного бизнеса</span></div>
+            <ul>
+              <li>Сквозные процессы</li>
+              <li>Бюджетирование</li>
+              <li>Многоорганизационный учёт</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="production.html" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--green" data-categories="production">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div>
+            <h3>1С:Управление производственным предприятием</h3>
+            <p class="program-card__desc">Планирование выпуска, материалы, себестоимость и связь со сбытом.</p>
+            <div class="program-card__audience">Подходит для<span>заводов и производственных цехов</span></div>
+            <ul>
+              <li>Заказы на производство</li>
+              <li>Калькуляция</li>
+              <li>Переход на ERP при росте</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="contacts.html?service=programs" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--violet" data-categories="complex">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+            <h3>1С:Документооборот</h3>
+            <p class="program-card__desc">Согласование внутренних документов с привязкой к учётным системам 1С.</p>
+            <div class="program-card__audience">Подходит для<span>компаний с делопроизводством и оптом</span></div>
+            <ul>
+              <li>Маршруты согласования</li>
+              <li>Архив версий</li>
+              <li>Связь с договорами</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="wholesale.html" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--sky" data-categories="complex">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V9l7-4 7 4v12"/></svg></div>
+            <h3>1С:Управление строительной организацией</h3>
+            <p class="program-card__desc">Объекты, сметы, подряд и материалы — учёт по стройкам и проектам.</p>
+            <div class="program-card__audience">Подходит для<span>строительных и подрядных организаций</span></div>
+            <ul>
+              <li>Учёт по объектам</li>
+              <li>Сметная стоимость</li>
+              <li>Снабжение строек</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="construction.html" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+          <article class="program-card program-card--blue" data-categories="complex">
+            <div class="program-card__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 14v7M8 21h8"/></svg></div>
+            <h3>1С:Фреш</h3>
+            <p class="program-card__desc">Облачная 1С: доступ из любой точки, автообновления и резервное копирование.</p>
+            <div class="program-card__audience">Подходит для<span>филиалов и удалённых офисов</span></div>
+            <ul>
+              <li>Работа через браузер</li>
+              <li>Типовые конфигурации</li>
+              <li>Сервисы 1С по тарифу</li>
+            </ul>
+            <div class="program-card__actions">
+              <a href="service-fresh.html" class="program-card__link">Подробнее</a>
+              <a href="contacts.html?service=programs" class="btn btn--primary btn--sm">Подобрать решение</a>
+            </div>
+          </article>
+
+        </div>
+
+        <aside class="programs-note reveal">
+          <div class="programs-note__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 8h.01"/></svg>
+          </div>
+          <p>Norma CS и торговое оборудование (ККТ) поставляются отдельно — см. <a href="product-norma.html">Norma CS</a> и <a href="service-kkt.html">ККТ</a>. Полный перечень лицензий уточняйте у менеджера или <a href="contacts.html?service=programs">закажите консультацию</a>.</p>
+        </aside>
       </div>
     </section>
 
-    <section class="section section--its-plain">
-      <div class="container">
-        <h2 class="industry-section__title reveal">Частые вопросы</h2>
+    <section class="programs-section programs-partner">
+      <div class="programs-container reveal">
+        <span class="programs-section__eyebrow">Партнёр 1С</span>
+        <h2 class="programs-section__title">Почему покупать 1С у официального партнёра</h2>
+        <div class="programs-stats">
+          <div class="programs-stat"><strong>20+</strong><span>лет опыта</span></div>
+          <div class="programs-stat"><strong>500+</strong><span>клиентов</span></div>
+          <div class="programs-stat"><strong>6</strong><span>отраслей</span></div>
+          <div class="programs-stat"><strong>1С</strong><span>официальный партнёр</span></div>
+        </div>
+        <div class="programs-benefits">
+          <article class="programs-benefit">
+            <div class="programs-benefit__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+            <h3>Помощь в выборе</h3>
+            <p>Сравним конфигурации под вашу отрасль — торговля, производство, строительство, общепит и услуги — без лишних лицензий.</p>
+          </article>
+          <article class="programs-benefit">
+            <div class="programs-benefit__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div>
+            <h3>Настройка и внедрение</h3>
+            <p>Установка, перенос данных и постановка учёта — легальные лицензии через 1С:Франчайзи и регистрация в системе.</p>
+          </article>
+          <article class="programs-benefit">
+            <div class="programs-benefit__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+            <h3>Сопровождение</h3>
+            <p>Обновления, поддержка пользователей и <a href="service-its.html">договор ИТС</a> — в одной компании в Южно-Сахалинске.</p>
+          </article>
+          <article class="programs-benefit">
+            <div class="programs-benefit__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Обучение сотрудников</h3>
+            <p>Показываем работу в программе, помогаем ключевым пользователям и сопровождаем после запуска.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs-section programs-route">
+      <div class="programs-container reveal">
+        <span class="programs-section__eyebrow">Подбор</span>
+        <h2 class="programs-section__title">Как выбрать программу 1С</h2>
+        <div class="programs-route__grid">
+          <article class="programs-route-step">
+            <span class="programs-route-step__num">1</span>
+            <div>
+              <h3>Расскажите о бизнесе</h3>
+              <p>Отрасль, число пользователей и как ведётся учёт сейчас.</p>
+            </div>
+          </article>
+          <article class="programs-route-step">
+            <span class="programs-route-step__num">2</span>
+            <div>
+              <h3>Определим задачи</h3>
+              <p>Склад, производство, кадры, несколько юрлиц — что важно в первую очередь.</p>
+            </div>
+          </article>
+          <article class="programs-route-step">
+            <span class="programs-route-step__num">3</span>
+            <div>
+              <h3>Сравним решения</h3>
+              <p>Коробка, клиент-сервер или 1С:Фреш — без навязывания лишних модулей.</p>
+            </div>
+          </article>
+          <article class="programs-route-step">
+            <span class="programs-route-step__num">4</span>
+            <div>
+              <h3>Покажем программу</h3>
+              <p>Демонстрация типового сценария под ваши процессы.</p>
+            </div>
+          </article>
+          <article class="programs-route-step">
+            <span class="programs-route-step__num">5</span>
+            <div>
+              <h3>Рассчитаем стоимость</h3>
+              <p>Лицензии, работы по внедрению и при необходимости <a href="catalog-services.html">сервисы 1С</a>.</p>
+            </div>
+          </article>
+          <article class="programs-route-step">
+            <span class="programs-route-step__num">6</span>
+            <div>
+              <h3>Поможем внедрить</h3>
+              <p>Запуск системы, обмен данными и обучение команды.</p>
+            </div>
+          </article>
+        </div>
+        <p class="programs-route__hint">Не уверены, нужна ли «1С:Бухгалтерия» или достаточно «Управления нашей фirmой»? Расскажите о бизнесе — подскажем оптимальный вариант.</p>
+      </div>
+    </section>
+
+    <section class="programs-section programs-faq">
+      <div class="programs-container">
+        <h2 class="programs-section__title reveal">Частые вопросы</h2>
         <div class="faq-list faq-accordion reveal">
           <article class="faq-item">
             <button type="button" class="faq-item__toggle" aria-expanded="false">
@@ -306,14 +452,14 @@
       </div>
     </section>
 
-    <section class="section section--alt">
-      <div class="container reveal">
-        <div class="cta">
-          <h2 class="cta__title">Подберём программу 1С под вашу задачу</h2>
-          <p class="cta__desc">Расскажите об отрасли и текущем учёте — предложим конфигурацию и рассчитаем стоимость лицензий и работ.</p>
-          <div class="cta__actions">
-            <a href="contacts.html?service=programs" class="btn btn--secondary btn--lg">Получить консультацию</a>
-            <a href="tel:+74242300420" class="btn btn--cta-phone btn--lg">Позвонить</a>
+    <section class="programs-cta">
+      <div class="programs-container reveal">
+        <div class="programs-cta__box">
+          <h2>Подберём программу 1С под задачи вашего бизнеса</h2>
+          <p>Изучим процессы, сравним решения и рассчитаем стоимость внедрения.</p>
+          <div class="programs-cta__actions">
+            <a href="contacts.html?service=programs" class="btn btn--primary btn--lg">Получить консультацию</a>
+            <p class="programs-cta__note">Ответим в течение рабочего дня</p>
           </div>
         </div>
       </div>
@@ -324,5 +470,26 @@
   <div id="site-footer"></div>
   <script src="../js/components.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      var filters = document.querySelector('.programs-filters');
+      var grid = document.getElementById('programs-grid');
+      if (!filters || !grid) return;
+
+      filters.addEventListener('click', function (e) {
+        var btn = e.target.closest('.programs-filters__btn');
+        if (!btn) return;
+        var filter = btn.getAttribute('data-filter');
+        filters.querySelectorAll('.programs-filters__btn').forEach(function (b) {
+          b.classList.toggle('is-active', b === btn);
+        });
+        grid.querySelectorAll('.program-card').forEach(function (card) {
+          var cats = (card.getAttribute('data-categories') || '').split(/\s+/);
+          var show = filter === 'all' || cats.indexOf(filter) !== -1;
+          card.classList.toggle('is-hidden', !show);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
