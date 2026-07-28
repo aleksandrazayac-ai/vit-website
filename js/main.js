@@ -14,6 +14,7 @@ const VIT = {
     this.initContactForm();
     this.initCounterAnimation();
     this.initBlogExpand();
+    this.initFaqAccordion();
   },
 
   setActiveNavLink() {
@@ -143,6 +144,13 @@ const VIT = {
     const form = document.getElementById('contact-form');
     if (!form) return;
 
+    const serviceSelect = form.querySelector('#service');
+    const serviceParam = new URLSearchParams(window.location.search).get('service');
+    if (serviceSelect && serviceParam) {
+      const match = serviceSelect.querySelector(`option[value="${CSS.escape(serviceParam)}"]`);
+      if (match) serviceSelect.value = serviceParam;
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -255,6 +263,21 @@ const VIT = {
     );
 
     counters.forEach(el => observer.observe(el));
+  },
+
+  initFaqAccordion() {
+    document.querySelectorAll('.faq-accordion .faq-item__toggle').forEach(toggle => {
+      const item = toggle.closest('.faq-item');
+      const panel = item?.querySelector('.faq-item__panel');
+      if (!item || !panel) return;
+
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        item.classList.toggle('is-expanded', !expanded);
+        panel.hidden = expanded;
+      });
+    });
   },
 
   initBlogExpand() {
