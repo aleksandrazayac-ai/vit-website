@@ -6,6 +6,7 @@
   <meta name="description" content="Автоматизация бизнеса на базе 1С на Сахалине: внедрение, сопровождение и развитие решений для торговли, производства, строительства и общепита. Официальный партнёр 1С с 2003 года.">
   <title>Автоматизация бизнеса на базе 1С на Сахалине | ВИТ</title>
   <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg">
+  <link rel="preload" as="image" href="../assets/images/hero-automation.png" type="image/png">
   <link rel="stylesheet" href="../css/main.css">
 </head>
 <body data-root="../" data-pages="" data-nav="home">
@@ -45,48 +46,21 @@
             </div>
           </div>
           <div class="hero__visual reveal">
-            <div class="hero-mockup" aria-hidden="true">
-              <div class="hero-mockup__window">
-                <div class="hero-mockup__toolbar">
-                  <span class="hero-mockup__dot hero-mockup__dot--red"></span>
-                  <span class="hero-mockup__dot hero-mockup__dot--yellow"></span>
-                  <span class="hero-mockup__dot hero-mockup__dot--green"></span>
-                  <span class="hero-mockup__title">1С · Панель управления</span>
-                </div>
-                <div class="hero-mockup__grid">
-                  <div class="hero-mockup__widget hero-mockup__widget--wide">
-                    <p class="hero-mockup__label">Продажи за месяц</p>
-                    <div class="hero-mockup__chart" role="presentation">
-                      <span style="--h: 45%"></span>
-                      <span style="--h: 62%"></span>
-                      <span style="--h: 55%"></span>
-                      <span style="--h: 78%"></span>
-                      <span style="--h: 70%"></span>
-                      <span style="--h: 92%"></span>
-                      <span style="--h: 85%"></span>
-                    </div>
-                  </div>
-                  <div class="hero-mockup__widget">
-                    <p class="hero-mockup__label">Склад</p>
-                    <p class="hero-mockup__kpi">1 248 <small>ед.</small></p>
-                    <div class="hero-mockup__progress"><span style="--w: 72%"></span></div>
-                    <p class="hero-mockup__hint">Заполненность 72%</p>
-                  </div>
-                  <div class="hero-mockup__widget">
-                    <p class="hero-mockup__label">Финансы</p>
-                    <p class="hero-mockup__kpi hero-mockup__kpi--up">+12,4%</p>
-                    <p class="hero-mockup__hint">Выручка к прошлому периоду</p>
-                  </div>
-                  <div class="hero-mockup__widget hero-mockup__widget--wide">
-                    <p class="hero-mockup__label">Интеграции 1С</p>
-                    <div class="hero-mockup__tags">
-                      <span>ККТ АТОЛ</span>
-                      <span>1С-Отчётность</span>
-                      <span>1С-ЭДО</span>
-                      <span>ИТС</span>
-                    </div>
-                  </div>
-                </div>
+            <div class="hero-automation">
+              <div class="hero-automation__stage">
+                <picture class="hero-automation__picture">
+                  <!-- Добавить <source srcset="../assets/images/hero-automation.webp" type="image/webp"> когда файл будет в assets/images -->
+                  <img
+                    class="hero-automation__img hero-automation__img--raster"
+                    src="../assets/images/hero-automation.png"
+                    alt="Автоматизация бизнес-процессов: склад, касса, документы, аналитика, облако и обмен данными"
+                    width="1536"
+                    height="1024"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    onerror="this.onerror=null;this.src='../assets/images/hero-automation.svg';this.classList.remove('hero-automation__img--raster');">
+                </picture>
               </div>
             </div>
           </div>
@@ -355,16 +329,11 @@
             <a href="catalog-services.html" class="service-card__link">Смотреть каталог →</a>
           </article>
         </div>
-        <div class="service-grid service-grid--3 reveal" style="margin-top: var(--space-8);">
+        <div class="service-grid reveal" style="margin-top: var(--space-8);">
           <article class="card service-card">
             <h3 class="card__title">Norma CS</h3>
             <p class="card__text">Нормативно-техническая документация для проектных и строительных организаций.</p>
             <a href="product-norma.html" class="service-card__link">Подробнее →</a>
-          </article>
-          <article class="card service-card">
-            <h3 class="card__title">ККТ и торговое оборудование</h3>
-            <p class="card__text">Онлайн-кассы, POS и периферия АТОЛ с интеграцией в 1С.</p>
-            <a href="product-kkt.html" class="service-card__link">Подробнее →</a>
           </article>
           <article class="card service-card">
             <h3 class="card__title">1С:Фреш</h3>
