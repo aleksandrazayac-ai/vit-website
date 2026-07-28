@@ -50,13 +50,15 @@
 
 .hero__visual {
   width: 100%;
-  max-width: 520px;
+  max-width: min(100%, 760px);
 }
 
 /* Hero automation visual (right column) */
 .hero-automation {
   position: relative;
-  width: 100%;
+  width: min(100%, 760px);
+  max-width: 760px;
+  margin-inline: auto;
   padding: var(--space-2) 0;
 }
 
@@ -64,7 +66,6 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -81,17 +82,22 @@
   height: auto;
   object-fit: contain;
   object-position: center;
-  filter: drop-shadow(0 40px 120px rgba(37, 99, 235, 0.15));
 }
 
-/* Raster hero art (webp/png): gentle float on whole composition */
 .hero-automation__img--raster {
-  animation: hero-automation-float 8s ease-in-out infinite;
+  animation: heroAutomationFloat 8s ease-in-out infinite;
+  filter: drop-shadow(0 32px 70px rgba(37, 99, 235, 0.14));
 }
 
-@keyframes hero-automation-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+@keyframes heroAutomationFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -383,8 +389,8 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .hero-automation {
-    transform: scale(0.85);
-    transform-origin: center center;
+    width: 100%;
+    max-width: 680px;
   }
 }
 
@@ -443,8 +449,8 @@
 
   .hero__visual {
     order: 2;
-    max-width: min(100%, 36rem);
     width: 100%;
+    max-width: min(100%, 620px);
   }
 
   .hero__title {
@@ -485,10 +491,12 @@
 
 @media (max-width: 479px) {
   .hero__visual {
-    max-width: 100%;
+    max-width: min(100%, 620px);
   }
 
   .hero-automation {
+    width: 100%;
+    max-width: 100%;
     padding: 0;
   }
 }

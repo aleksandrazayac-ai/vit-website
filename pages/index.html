@@ -6,7 +6,7 @@
   <meta name="description" content="Автоматизация бизнеса на базе 1С на Сахалине: внедрение, сопровождение и развитие решений для торговли, производства, строительства и общепита. Официальный партнёр 1С с 2003 года.">
   <title>Автоматизация бизнеса на базе 1С на Сахалине | ВИТ</title>
   <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg">
-  <link rel="preload" as="image" href="../assets/images/hero-automation.svg">
+  <link rel="preload" as="image" href="../assets/images/hero-automation.png" type="image/png">
   <link rel="stylesheet" href="../css/main.css">
 </head>
 <body data-root="../" data-pages="" data-nav="home">
@@ -46,22 +46,20 @@
             </div>
           </div>
           <div class="hero__visual reveal">
-            <div class="hero-automation" aria-hidden="true">
+            <div class="hero-automation">
               <div class="hero-automation__stage">
                 <picture class="hero-automation__picture">
-                  <source media="(max-width: 480px)" srcset="../assets/images/hero-automation-sm.svg" type="image/svg+xml">
-                  <source srcset="../assets/images/hero-automation.webp" type="image/webp">
-                  <source srcset="../assets/images/hero-automation.png" type="image/png">
+                  <!-- Добавить <source srcset="../assets/images/hero-automation.webp" type="image/webp"> когда файл будет в assets/images -->
                   <img
-                    class="hero-automation__img"
-                    src="../assets/images/hero-automation.svg"
-                    alt=""
-                    width="960"
-                    height="720"
+                    class="hero-automation__img hero-automation__img--raster"
+                    src="../assets/images/hero-automation.png"
+                    alt="Автоматизация бизнес-процессов: склад, касса, документы, аналитика, облако и обмен данными"
+                    width="1536"
+                    height="1024"
                     loading="eager"
                     fetchpriority="high"
                     decoding="async"
-                    onload="this.classList.toggle('hero-automation__img--raster', !/\.svg($|\?)/i.test(this.currentSrc || this.src))">
+                    onerror="this.onerror=null;this.src='../assets/images/hero-automation.svg';this.classList.remove('hero-automation__img--raster');">
                 </picture>
               </div>
             </div>
