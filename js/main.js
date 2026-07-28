@@ -98,7 +98,7 @@ const VIT = {
       if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
     });
 
-    window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => {
+    window.matchMedia('(min-width: 992px)').addEventListener('change', (e) => {
       if (e.matches && menu.classList.contains('is-open')) closeMenu();
     });
   },
