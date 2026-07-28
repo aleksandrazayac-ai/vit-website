@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" fill="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="ha-screen-sm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="ha-line-sm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#3b82f6" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#2563eb" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="ha-soft-sm" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ha-card-shadow-sm" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2563eb" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <style>
+    @keyframes ha-float-laptop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes ha-float-a { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(0, -5px); } }
+    @keyframes ha-float-b { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(3px, -4px); } }
+    @keyframes ha-float-d { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(5px, 4px); } }
+    @keyframes ha-float-f { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(4px, -3px); } }
+    @keyframes ha-line-pulse { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }
+    @keyframes ha-ring-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .ha-laptop { animation: ha-float-laptop 8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .ha-mod-a { animation: ha-float-a 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .ha-mod-b { animation: ha-float-b 9s ease-in-out infinite; animation-delay: 0.8s; transform-box: fill-box; transform-origin: center; }
+    .ha-mod-d { animation: ha-float-d 8.5s ease-in-out infinite; animation-delay: 0.4s; transform-box: fill-box; transform-origin: center; }
+    .ha-mod-f { animation: ha-float-f 7.5s ease-in-out infinite; animation-delay: 2s; transform-box: fill-box; transform-origin: center; }
+    .ha-lines { animation: ha-line-pulse 4s ease-in-out infinite; }
+    .ha-ring { animation: ha-ring-spin 80s linear infinite; transform-box: fill-box; transform-origin: 480px 380px; }
+    @media (prefers-reduced-motion: reduce) {
+      .ha-laptop, .ha-mod-a, .ha-mod-b, .ha-mod-d, .ha-mod-f, .ha-lines, .ha-ring { animation: none; }
+    }
+  </style>
+  <g class="ha-ring" opacity="0.45">
+    <ellipse cx="480" cy="380" rx="340" ry="260" stroke="#dbeafe" stroke-width="1.5" stroke-dasharray="8 14"/>
+    <ellipse cx="480" cy="380" rx="300" ry="228" stroke="#eff6ff" stroke-width="1"/>
+  </g>
+  <g class="ha-lines">
+    <path d="M480 420 C380 400 280 320 200 220" stroke="url(#ha-line-sm)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M480 420 C580 400 680 300 760 200" stroke="url(#ha-line-sm)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M480 420 C480 320 480 240 480 160" stroke="url(#ha-line-sm)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M480 420 C520 520 560 580 600 640" stroke="url(#ha-line-sm)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g class="ha-laptop" filter="url(#ha-soft-sm)">
+    <ellipse cx="480" cy="580" rx="220" ry="28" fill="#2563eb" opacity="0.08"/>
+    <path d="M220 520 Q480 560 740 520 L760 540 Q480 580 200 540 Z" fill="#e2e8f0"/>
+    <rect x="260" y="280" width="440" height="260" rx="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="276" y="296" width="408" height="228" rx="10" fill="url(#ha-screen-sm)" stroke="#dbeafe" stroke-width="1"/>
+    <rect x="296" y="316" width="120" height="10" rx="5" fill="#2563eb" opacity="0.15"/>
+    <rect x="296" y="336" width="180" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="296" y="380" width="168" height="112" rx="10" fill="#eff6ff" stroke="#dbeafe" stroke-width="1"/>
+    <path d="M320 450 L344 410 L368 432 L392 396 L416 420" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <rect x="480" y="380" width="184" height="52" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="480" y="444" width="184" height="48" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="296" y="508" width="368" height="8" rx="4" fill="#2563eb" opacity="0.35"/>
+  </g>
+  <g class="ha-mod-a" filter="url(#ha-card-shadow-sm)">
+    <rect x="108" y="168" width="132" height="72" rx="16" fill="#fff" stroke="#dbeafe" stroke-width="1"/>
+    <text x="172" y="210" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#1e293b">!:;04</text>
+  </g>
+  <g class="ha-mod-b" filter="url(#ha-card-shadow-sm)">
+    <rect x="720" y="152" width="132" height="72" rx="16" fill="#fff" stroke="#dbeafe" stroke-width="1"/>
+    <text x="784" y="194" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#1e293b">0AA0</text>
+  </g>
+  <g class="ha-mod-d" filter="url(#ha-card-shadow-sm)">
+    <rect x="404" y="72" width="132" height="72" rx="16" fill="#fff" stroke="#dbeafe" stroke-width="1"/>
+    <text x="468" y="114" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#1e293b">1;0:></text>
+  </g>
+  <g class="ha-mod-f" filter="url(#ha-card-shadow-sm)">
+    <rect x="392" y="612" width="148" height="72" rx="16" fill="#fff" stroke="#dbeafe" stroke-width="1"/>
+    <text x="456" y="654" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#1e293b">1<5= 40==K<8</text>
+  </g>
+</svg>
