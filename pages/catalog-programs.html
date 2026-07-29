@@ -7,7 +7,8 @@
   <title>Программы 1С:Предприятие | ВИТ</title>
   <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg">
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/page-programs.css?v=20260729">
+  <link rel="preload" as="image" href="../assets/images/hero-programs.avif" type="image/avif">
+  <link rel="stylesheet" href="../css/page-programs.css?v=20260729b">
 </head>
 <body class="programs-page" data-root="../" data-pages="" data-nav="products">
 
@@ -33,11 +34,19 @@
               <span>Официальный партнёр 1С · Более 20 лет на Сахалине</span>
             </p>
           </div>
-          <div class="programs-hero__visual reveal" aria-hidden="true">
-            <div class="programs-hero__glow"></div>
-            <div class="programs-hero__image-wrap">
-              <img class="programs-hero__image" src="../assets/images/hero-automation.png" alt="" width="1536" height="1024" loading="lazy" decoding="async">
-            </div>
+          <div class="programs-hero__visual reveal">
+            <picture class="hero-illustration" aria-hidden="true" role="presentation">
+              <source srcset="../assets/images/hero-programs.avif" type="image/avif">
+              <source srcset="../assets/images/hero-programs.webp" type="image/webp">
+              <img
+                src="../assets/images/hero-programs.png"
+                alt=""
+                width="1484"
+                height="1060"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async">
+            </picture>
           </div>
         </div>
       </div>

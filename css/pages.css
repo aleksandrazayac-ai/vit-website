@@ -50,60 +50,26 @@
 
 .hero__visual {
   width: 100%;
-  max-width: min(100%, 760px);
+  display: flex;
+  justify-content: center;
 }
 
-/* Hero automation visual (right column) */
-.hero-automation {
-  position: relative;
-  width: min(100%, 760px);
-  max-width: 760px;
-  margin-inline: auto;
-  padding: var(--space-2) 0;
-}
-
-.hero-automation__stage {
-  position: relative;
-  z-index: 1;
+.hero-illustration {
   width: 100%;
-  margin-inline: auto;
-}
-
-.hero-automation__picture {
+  max-width: 720px;
   display: block;
-  width: 100%;
-  line-height: 0;
 }
 
-.hero-automation__img {
-  display: block;
+.hero-illustration img {
   width: 100%;
-  max-width: 100%;
   height: auto;
-  object-fit: contain;
-  object-position: center;
+  display: block;
 }
 
-.hero-automation__img--raster {
-  animation: heroAutomationFloat 8s ease-in-out infinite;
-  filter: drop-shadow(0 32px 70px rgba(37, 99, 235, 0.14));
-}
-
-@keyframes heroAutomationFloat {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    transform: translate3d(0, -8px, 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-automation__img--raster {
-    animation: none;
-  }
+.industries-section__illustration {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-10);
 }
 
 /* Legacy hero mockup (other pages / fallback) */
@@ -387,13 +353,6 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .hero-automation {
-    width: 100%;
-    max-width: 680px;
-  }
-}
-
 @media (min-width: 1200px) {
   .hero__inner {
     gap: var(--space-10);
@@ -408,10 +367,6 @@
   .hero__visual {
     flex: 0 0 48%;
     max-width: 48%;
-  }
-
-  .hero-automation {
-    padding: var(--space-4) 0 var(--space-2);
   }
 }
 
@@ -492,12 +447,6 @@
 @media (max-width: 479px) {
   .hero__visual {
     max-width: min(100%, 620px);
-  }
-
-  .hero-automation {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
   }
 }
 
@@ -792,6 +741,33 @@
   color: var(--color-text-muted);
   max-width: 560px;
   line-height: var(--line-height-relaxed);
+}
+
+.page-hero__inner {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.page-hero__content {
+  min-width: 0;
+}
+
+.page-hero__visual {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .page-hero--illustrated .page-hero__inner {
+    grid-template-columns: 1fr minmax(0, 420px);
+    gap: var(--space-10);
+  }
+
+  .page-hero--illustrated .page-hero__desc {
+    max-width: none;
+  }
 }
 
 .page-hero__actions {
