@@ -6,7 +6,8 @@
   <meta name="description" content="Сервисы 1С от партнёра ВИТ: 1С-Отчётность, 1С-ЭДО, информационная система ИТС и линия консультаций. Подключение и настройка в Южно-Сахалинске.">
   <title>Сервисы 1С | ВИТ</title>
   <link rel="icon" type="image/svg+xml" href="../assets/icons/logo.svg">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="preload" as="image" href="../assets/images/hero-services.avif" type="image/avif">
+  <link rel="stylesheet" href="../css/main.css?v=20260729d">
 </head>
 <body data-root="../" data-pages="" data-nav="products">
 
@@ -14,16 +15,32 @@
 
   <main class="main">
 
-    <section class="page-hero">
-      <div class="container">
-        <nav class="breadcrumbs" aria-label="Хлебные крошки">
-          <a href="index.html">Главная</a><span>/</span><span aria-current="page">Сервисы 1С</span>
-        </nav>
-        <h1 class="page-hero__title">Сервисы 1С</h1>
-        <p class="page-hero__desc">Облачные и информационные сервисы фирмы «1С», которые подключаются к программам «1С:Предприятие» — отчётность, электронный документооборот, методическая база и консультации.</p>
-        <div class="page-hero__actions">
-          <a href="contacts.html?service=1c-services" class="btn btn--primary btn--lg">Подключить сервис</a>
-          <a href="#catalog" class="btn btn--secondary btn--lg">Смотреть сервисы</a>
+    <section class="page-hero page-hero--inner page-hero--visual">
+      <div class="page-hero__container">
+        <div class="page-hero__content">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a><span>/</span><span aria-current="page">Сервисы 1С</span>
+          </nav>
+          <h1 class="page-hero__title">Сервисы 1С</h1>
+          <p class="page-hero__desc">Облачные и информационные сервисы фирмы «1С», которые подключаются к программам «1С:Предприятие» — отчётность, электронный документооборот, методическая база и консультации.</p>
+          <div class="page-hero__actions">
+            <a href="contacts.html?service=1c-services" class="btn btn--primary btn--lg">Подключить сервис</a>
+            <a href="#catalog" class="btn btn--secondary btn--lg">Смотреть сервисы</a>
+          </div>
+        </div>
+        <div class="page-hero__visual" aria-hidden="true">
+          <picture>
+            <source srcset="../assets/images/hero-services.avif" type="image/avif">
+            <source srcset="../assets/images/hero-services.webp" type="image/webp">
+            <img
+              src="../assets/images/hero-services.png"
+              alt=""
+              width="1480"
+              height="1062"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async">
+          </picture>
         </div>
       </div>
     </section>
