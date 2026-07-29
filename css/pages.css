@@ -1,23 +1,33 @@
-/* Hero */
+/* Hero (главная) */
 .hero {
+  position: relative;
   padding-block: var(--space-12) var(--space-10);
   overflow: hidden;
-  background:
-    radial-gradient(circle at 78% 35%, rgba(37, 99, 235, 0.1), transparent 32%),
-    radial-gradient(circle at 70% 75%, rgba(59, 130, 246, 0.07), transparent 42%),
-    linear-gradient(180deg, #ffffff, #fbfdff);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
 }
 
-.hero__inner {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-10);
-  align-items: center;
-  text-align: center;
+.hero__container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: stretch;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
 }
 
 .hero__content {
   max-width: 640px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .hero__content {
+    text-align: left;
+    margin-inline: 0;
+  }
 }
 
 .hero__title {
@@ -49,9 +59,22 @@
 }
 
 .hero__visual {
+  position: relative;
+  min-height: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.hero__visual picture {
+  display: block;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  height: 100%;
+}
+
+.hero__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero-illustration {
@@ -64,12 +87,6 @@
   width: 100%;
   height: auto;
   display: block;
-}
-
-.industries-section__illustration {
-  display: flex;
-  justify-content: center;
-  margin-bottom: var(--space-10);
 }
 
 /* Legacy hero mockup (other pages / fallback) */
@@ -295,19 +312,21 @@
 
 @media (min-width: 768px) {
   .hero {
-    padding-block: var(--space-20) var(--space-12);
+    padding-block: var(--space-16) var(--space-10);
   }
 
-  .hero__inner {
-    flex-direction: row;
+  .hero__container {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 1.05fr);
+    gap: clamp(var(--space-6), 2.5vw, var(--space-10));
+    align-items: stretch;
     text-align: left;
-    gap: var(--space-12);
-    align-items: center;
   }
 
   .hero__content {
-    flex: 1;
     max-width: none;
+    align-self: center;
+    text-align: left;
+    margin-inline: 0;
   }
 
   .hero__title {
@@ -323,13 +342,23 @@
   }
 
   .hero__visual {
-    flex: 1;
-    max-width: none;
-    order: 2;
+    --hero-bleed: max(var(--space-4), (100vw - var(--container-max)) / 2);
+    align-self: stretch;
+    min-height: 100%;
+    margin-right: calc(-1 * var(--hero-bleed));
+    width: calc(100% + var(--hero-bleed));
   }
 
-  .hero__content {
-    order: 1;
+  .hero__visual picture {
+    min-height: 100%;
+  }
+
+  .hero__visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: contain;
+    object-position: center right;
   }
 
   .hero-bento {
@@ -354,19 +383,13 @@
 }
 
 @media (min-width: 1200px) {
-  .hero__inner {
-    gap: var(--space-10);
-    align-items: center;
+  .hero__container {
+    grid-template-columns: minmax(0, 1fr) minmax(520px, 1.1fr);
   }
 
-  .hero__content {
-    flex: 0 0 52%;
-    max-width: 52%;
-  }
-
-  .hero__visual {
-    flex: 0 0 48%;
-    max-width: 48%;
+  .hero__visual img {
+    min-height: 480px;
+    object-position: center right;
   }
 }
 
@@ -375,8 +398,8 @@
     font-size: var(--font-size-5xl);
   }
 
-  .hero__inner {
-    gap: var(--space-16);
+  .hero__container {
+    gap: var(--space-12);
   }
 
   .hero-bento__value {
@@ -393,19 +416,30 @@
     padding-block: var(--space-8) var(--space-6);
   }
 
-  .hero__inner {
-    flex-direction: column;
-    gap: var(--space-8);
+  .hero__container {
+    gap: var(--space-6);
   }
 
   .hero__content {
-    order: 1;
+    text-align: center;
+    max-width: none;
+    margin-inline: auto;
   }
 
   .hero__visual {
-    order: 2;
     width: 100%;
-    max-width: min(100%, 620px);
+    max-width: none;
+    margin: 0;
+    order: 2;
+  }
+
+  .hero__visual img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: min(52vw, 360px);
+    object-fit: contain;
+    object-position: center bottom;
   }
 
   .hero__title {
@@ -421,6 +455,7 @@
 
   .hero__actions {
     margin-bottom: var(--space-5);
+    justify-content: center;
   }
 
   .hero-bento {
@@ -445,8 +480,8 @@
 }
 
 @media (max-width: 479px) {
-  .hero__visual {
-    max-width: min(100%, 620px);
+  .hero__visual img {
+    max-height: min(56vw, 320px);
   }
 }
 
