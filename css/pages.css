@@ -3443,3 +3443,30 @@
   background: linear-gradient(180deg, var(--color-primary-subtle) 0%, var(--color-bg-alt) 100%);
 }
 
+.card__list {
+  margin: var(--space-3) 0 0;
+  padding-left: var(--space-5);
+  list-style: disc;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+}
+
+.card__list li + li {
+  margin-top: var(--space-1);
+}
+
+.support-scenarios .its-extra-row__answer {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-muted);
+  white-space: normal;
+}
+
+@media (min-width: 768px) {
+  .support-scenarios .its-extra-row__answer {
+    max-width: 42%;
+    text-align: right;
+  }
+}
+
