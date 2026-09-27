@@ -20,9 +20,9 @@ vit-website/
 ├── netlify-forms.html          # Скрытая регистрация формы для Netlify
 ├── netlify.toml                # Конфиг деплоя, редиректы, заголовки кэша
 ├── robots.txt                  # SEO (домен vit-ltd.ru, черновик)
-├── sitemap.xml                 # 25 публичных URL
+├── sitemap.xml                 # 34 публичных URL
 │
-├── pages/                      # 31 HTML-файл
+├── pages/                      # 41 HTML-файл (34 production + 6 DEV + 1 legacy redirect)
 │   ├── index.html              # Главная
 │   ├── about.html
 │   ├── services.html
@@ -120,9 +120,10 @@ vit-website/
 
 | Категория | Кол-во | Примечание |
 |-----------|--------|------------|
-| HTML в `pages/` | **31** | |
-| Публичные (sitemap) | **25** | hero-concepts **не** включены |
+| HTML в `pages/` | **41** | |
+| Production (sitemap) | **34** | hero-concepts и `norma-service` **не** включены |
 | DEV / CONCEPT | **6** | hero-a, hero-b, hero-c, hero-v1, hero-v2, hero-v3 |
+| Legacy redirect | **1** | `norma-service.html` → 301 `product-norma.html` |
 | Системные (корень) | 3 | index redirect, 404, netlify-forms |
 
 ### Публичная структура (меню)
@@ -135,15 +136,21 @@ vit-website/
 │   ├── Линия консультаций                 /pages/line-consulting.html
 │   ├── Внедрение 1С                       /pages/service-customize.html
 │   ├── Бухгалтерское обслуживание         /pages/service-1cbo.html
-│   ├── Norma CS (услуга)                  /pages/norma-service.html
-│   └── Сопровождение ККТ                  /pages/service-kkt.html
+│   └── Подключение и обслуживание ККТ   /pages/service-kkt.html
 ├── Продукты                     /pages/catalog-programs.html
 │   ├── Программы 1С             /pages/catalog-programs.html
+│   │   ├── 1С:Бухгалтерия 8     /pages/product-1c-buhgalteria.html
+│   │   ├── 1С:ЗУП 8             /pages/product-1c-zup.html
+│   │   ├── 1С:УТ 8              /pages/product-1c-ut.html
 │   │   └── 1С:Фреш              /pages/service-fresh.html
 │   ├── Сервисы 1С               /pages/catalog-services.html
-│   │   └── 1С-Отчётность        /pages/service-otchetnost.html
-│   ├── Norma CS (продукт)       /pages/product-norma.html
-│   └── ККТ и оборудование       /pages/product-kkt.html
+│   │   ├── 1С-Отчётность        /pages/service-otchetnost.html
+│   │   ├── 1С-ЭДО               /pages/service-edo.html
+│   │   ├── 1С-ЭПД               /pages/service-epd.html
+│   │   └── 1С:КП / 1С:ИТС       /pages/service-its-package.html
+│   ├── NormaCS                    /pages/product-norma.html  *(продукт + внедрение/сопровождение ВИТ)*
+│   ├── ККТ и онлайн-кассы       /pages/product-kkt.html
+│   └── Торговое оборудование    /pages/product-trade-equipment.html
 ├── Отрасли                      /pages/index.html#industries
 │   └── 6 отраслевых страниц     retail, wholesale, cafe, production, construction, mining
 ├── Новости                      /pages/blog.html
@@ -154,8 +161,25 @@ vit-website/
 
 | Страница | URL | Как попасть |
 |----------|-----|-------------|
-| **Сопровождение 1С (работы ВИТ)** | `service-support.html` | С `service-its`, `catalog-services`; **в sitemap** |
+| **Сопровождение 1С (работы ВИТ)** | `service-support.html` | Хаб `service-its`; **в sitemap** |
+| **Обновление 1С** | `service-update.html` | Хаб `service-its`; **в sitemap** |
+| **Администрирование / техподдержка** | `service-its-admin.html` | Хаб `service-its`; **в sitemap** |
+| **Тарифы сопровождения ВИТ** | `service-its-tariffs.html` | Хаб `service-its`, связанные услуги; **в sitemap** |
+| **1С:КП / 1С:ИТС** | `service-its-package.html` | `catalog-services.html`; **в sitemap** |
+| **1С-ЭДО** | `service-edo.html` | `catalog-services.html`; **в sitemap** |
+| **1С-ЭПД** | `service-epd.html` | `catalog-services.html`; **в sitemap** |
+| **1С:Фреш** | `service-fresh.html` | `catalog-programs.html`; **в sitemap** |
+| **1С:Бухгалтерия 8** | `product-1c-buhgalteria.html` | `catalog-programs.html`; **в sitemap** |
+| **1С:ЗУП 8** | `product-1c-zup.html` | `catalog-programs.html`; **в sitemap** |
+| **1С:УТ 8** | `product-1c-ut.html` | `catalog-programs.html`; **в sitemap** |
+| **1С-Отчётность** | `service-otchetnost.html` | `catalog-services.html`; **в sitemap** |
 | **Кейсы** | `cases.html` | about, отрасли; **в sitemap** |
+
+### Legacy / не в sitemap
+
+| Страница | Статус |
+|----------|--------|
+| `norma-service.html` | Файл существует; **301** → `product-norma.html`; canonical на legacy-URL; **не в sitemap** |
 
 ### DEV / CONCEPT (не публичная IA)
 
@@ -164,16 +188,14 @@ vit-website/
 | `hero-a.html`, `hero-b.html`, `hero-c.html` | Черновики Hero (mock + переключатель) |
 | `hero-v1.html`, `hero-v2.html`, `hero-v3.html` | Черновики Hero (minimal / photo / stats) |
 
-**Не в меню, не в sitemap.** Доступ только по прямому URL или переключателю между концепциями. Ссылка «Сайт» / «Текущий сайт» → `index.html`.
+**Не в меню, не в sitemap.** `noindex, nofollow`. Доступ только по прямому URL.
 
-### Отсутствующие URL (целевой roadmap)
+### Отсутствующие URL (roadmap)
 
-- **«Обновление 1С»** — отдельная страница услуги (файл **ещё не создан**)
-- **«1С:КП / 1С:ИТС»** — отдельная продуктовая страница официального комплекта поддержки (файл **ещё не создан**; рабочее имя TBD, например `service-its-kp.html` или в taxonomy продуктов)
 - Отдельные статьи новостей, отдельные кейсы по slug
-- Страницы программ 1С (кроме 1С:Фреш)
-- 1С-ЭДО (упоминается в каталоге сервисов)
+- Отдельные landing-страницы конфигураций 1С (кроме 1С:Фреш)
 - Хаб «Отрасли» отдельным URL
+- Страница политики персональных данных
 
 ---
 
@@ -193,9 +215,11 @@ vit-website/
 | # | Сценарий | URL | Пользовательская формула |
 |---|----------|-----|--------------------------|
 | 1 | Линия консультаций | `line-consulting.html` | «Объясните, как правильно выполнить операцию в 1С» |
-| 2 | Обновление 1С | *страница TBD* | «Мне нужно обновить 1С» |
+| 2 | Обновление 1С | `service-update.html` | «Мне нужно обновить 1С» |
 | 3 | Сопровождение 1С | `service-support.html` | «Настройте / исправьте / доработайте систему» |
-| 4 | 1С:КП / 1С:ИТС | *страница TBD* | «Мне нужен официальный комплект поддержки 1С» |
+| 4 | Администрирование / техподдержка 1С | `service-its-admin.html` | «Настроить среду, в которой работает 1С» |
+
+**1С:КП / 1С:ИТС** — **не** четвёртая услуга хаба. Продуктовая страница: `service-its-package.html` (каталог «Сервисы 1С»).
 
 **Не считать эти сущности дублями.**
 
@@ -205,16 +229,24 @@ vit-website/
         ├── Линия консультаций      → объяснить, как сделать
         ├── Обновление 1С           → обновить программу
         ├── Сопровождение 1С        → работы специалиста в базе
-        └── 1С:КП / 1С:ИТС          → официальный комплект поддержки
+        └── Администрирование       → пользователи, доступы, рабочие места
+
+ПРОДУКТЫ → Сервисы 1С
+        ├── 1С:КП / 1С:ИТС          → официальный комплект поддержки (service-its-package.html)
+        ├── 1С-ЭДО                  → service-edo.html
+        └── 1С-ЭПД                  → service-epd.html
+
+ОТДЕЛЬНО (не хаб):
+        └── Тарифы сопровождения ВИТ → service-its-tariffs.html
 ```
 
 ### Фактическое состояние кода (AS-IS)
 
-`service-its.html` **пока** содержит контент, близкий к смешению хаба и ИТС (карточки направлений, блоки про обновления и ИТС). **Целевая роль — хаб; переработка контента/вёрстки — задача в TODO.**
+`service-its.html` — **хаб** с четырьмя карточками сценариев и decision-guide. Illustrated hero (`hero-support`).
 
-Hero (факт): `page-hero--illustrated`, asset **`hero-support`**.
+Дочерние страницы услуг хаба: `line-consulting.html`, `service-update.html`, `service-support.html`, `service-its-admin.html` (в sitemap, не в dropdown меню).
 
----
+Продукт 1С:КП/ИТС: `service-its-package.html` — вход с `catalog-services.html`, не с хаба.
 
 ### line-consulting.html — «Линия консультаций 1С»
 
@@ -243,39 +275,119 @@ Hero (факт): текстовый `page-hero`. В меню **нет**; в site
 
 ---
 
-### Целевая страница «Обновление 1С» (файл не создан)
+### service-update.html — «Обновление 1С»
 
-**Отдельная страница услуги.** В roadmap, HTML **не создавать** на этом этапе.
+**Отдельная страница услуги.** Не смешивать с полным сопровождением и не считать страницей 1С:КП/ИТС.
 
-Целевое содержание:
-
-- обновление типовых конфигураций;
-- установка релизов и платформы;
-- настройка автообновления;
-- проверка совместимости;
-- резервное копирование перед обновлением;
-- отдельное пояснение для изменённых / доработанных конфигураций.
+- обновление конфигурации и платформы;
+- типовые и доработанные программы;
+- порядок работ, связь с договором ИТС/КП;
+- разграничение с сопровождением и консультациями.
 
 Формула: **«Мне нужно обновить 1С»**.
 
+Hero (факт): текстовый `page-hero`. В меню **нет**; в sitemap **есть**. Breadcrumb: … / Обслуживание и сопровождение 1С / Обновление 1С. CTA → `contacts.html?service=update-1c`.
+
 ---
 
-### Целевая страница «1С:КП / 1С:ИТС» (файл не создан)
+### service-its-package.html — «1С:КП / 1С:ИТС»
 
-**Отдельная продуктовая страница** официального комплекта поддержки. **Не** хаб обслуживания.
+**Продуктовая страница** официального комплекта поддержки 1С. **Не** хаб, **не** дочерняя услуга сопровождения.
 
-Целевое содержание:
-
-- что такое 1С:КП / 1С:ИТС и зачем нужен договор;
-- кому подходит;
-- обновления, информационная система ИТС, сервисы 1С, поддержка;
-- какие услуги партнёра ВИТ могут входить в комплект;
-- какие дополнительные работы ВИТ выполняются отдельно;
-- варианты подключения через ВИТ.
+- что такое 1С:КП / 1С:ИТС;
+- состав комплекта (с оговоркой про вариант договора);
+- роль партнёра ВИТ;
+- разграничение с обновлением, сопровождением, линией консультаций;
+- **отдельно** от коммерческих тарифов ВИТ (`service-its-tariffs.html`).
 
 Формула: **«Мне нужен официальный комплект поддержки 1С»**.
 
-Имя файла определить при реализации (не переименовывать `service-its.html`).
+Hero (факт): текстовый `page-hero`. Breadcrumb: Главная → Сервисы 1С → 1С:КП / 1С:ИТС. `data-nav="products"`. В sitemap **есть**. CTA → `contacts.html?service=its-package`.
+
+---
+
+### service-edo.html — «1С-ЭДО»
+
+**Создана.** Продуктовая landing электронного документооборота в 1С. Breadcrumb: Главная → Сервисы 1С → 1С-ЭДО. `data-nav="products"`. В sitemap **есть**. CTA → `contacts.html?service=edo`. Связь с `service-epd.html`.
+
+---
+
+### service-epd.html — «1С-ЭПД»
+
+**Создана.** Продуктовая landing электронных перевозочных документов. Breadcrumb: Главная → Сервисы 1С → 1С-ЭПД. `data-nav="products"`. В sitemap **есть**. CTA → `contacts.html?service=epd`. Визуал по ref-assets (`assets/images/products/epd/`).
+
+---
+
+### service-its-tariffs.html — «Тарифы сопровождения 1С»
+
+**Создана.** Коммерческая линейка тарифов ВИТ — отдельная сущность от продукта 1С:КП/ИТС.
+
+Breadcrumb: Главная → Услуги → Обслуживание и сопровождение 1С → Тарифы сопровождения 1С. `data-nav="services"`. В sitemap **есть**.
+
+Группы: A (ежемесячные типовые), B (с 1С:КП ПРОФ), C (квартальные), D (нетиповые). Цены на сайте — только «от [сумма] ₽». Источник — прайс-листы заказчика. Устаревшая лестница Базовый–Проф+ **не является** полной тарифной системой.
+
+---
+
+### service-its-admin.html — «Администрирование и техническая поддержка 1С»
+
+**Создана.** Четвёртый сценарий хаба. Breadcrumb: Главная → Услуги → Обслуживание и сопровождение 1С → Администрирование и техническая поддержка 1С. `data-nav="services"`. В sitemap **есть**.
+
+Граница: техподдержка (среда, установка, перенос, сервисы) vs сопровождение (работа с системой). Разовая ставка — от 5 500 ₽/час. Источник фактов — прайс разовых услуг ВИТ от 01.01.2026.
+
+---
+
+### product-kkt.html — «ККТ и онлайн-кассы для бизнеса»
+
+**Продуктовая страница** подбора ККТ / онлайн-касс / фискальной техники. **Не** сервисная страница и **не** каталог конкретных моделей.
+
+- сценарии выбора (магазин, общепит, услуги, рабочее место с 1С);
+- типы решений (онлайн-кассы, фискальные регистраторы, ККТ + периферия);
+- критерии выбора; блок «ВИТ поможет подобрать»;
+- split «ККТ vs торговое оборудование»; компактный service teaser → `service-kkt.html`.
+
+**Не содержит:** цены товаров, конкретные модели без подтверждения, прайс регистрации, полный сервисный контент.
+
+Breadcrumb: Главная → Продукты → ККТ и онлайн-кассы. `data-nav="products"`. CTA → `contacts.html?service=kkt-product`. Trust-marker: авторизованный сервисный центр АТОЛ в Южно-Сахалинске. В sitemap **есть** (URL без изменений).
+
+**Form param:** `kkt-product` (optgroup «Продукты»).
+
+---
+
+### product-trade-equipment.html — «Торговое оборудование для рабочего места»
+
+**Продуктовая страница** подбора POS, сканеров, весов, принтеров этикеток, денежных ящиков, ТСД и периферии. **Не** сервисная страница.
+
+- сценарии рабочего места; категории оборудования; витрина реальных моделей из каталога ВИТ;
+- комплектное решение; критерии выбора; VIT-band; split с `product-kkt.html`;
+- service teaser → `service-kkt.html`.
+
+Breadcrumb: Главная → Продукты → Торговое оборудование. `data-nav="products"`. CTA → `contacts.html?service=trade-equipment`. В sitemap **есть**.
+
+**Form param:** `trade-equipment` (optgroup «Продукты»). Option `equipment` заменён.
+
+---
+
+### service-kkt.html — «Подключение и обслуживание ККТ и торгового оборудования»
+
+**Единая сервисная страница** подключения и обслуживания ККТ и торгового оборудования. **Не** каталог товаров.
+
+- регистрация и настройка ККТ, ОФД, интеграция с 1С;
+- настройка POS, сканеров, принтеров, весов;
+- замена ФН, технические работы;
+- комплексный запуск рабочего места;
+- навигационный блок «техника или услуга».
+
+**Продуктовая граница (целевая модель):**
+
+| Сущность | URL | Вопрос пользователя |
+|----------|-----|---------------------|
+| Продукт: ККТ / онлайн-кассы | `product-kkt.html` | «Какую кассу выбрать для моего бизнеса?» |
+| Продукт: торговое оборудование | `product-trade-equipment.html` | «Нужно оснастить рабочее место» |
+| Услуга: подключение и обслуживание | `service-kkt.html` | «Оборудование есть — помогите подключить и обслуживать» |
+
+**Цена на странице (подтверждено):** настройка торгового оборудования — **от 5 500 ₽/час** (прайс разовых услуг ВИТ от 01.01.2026). Старые цены со старого сайта (3 500 / 4 000 / 3 450 / 7 500 ₽ и др.) **не используются**.
+
+Breadcrumb: Главная → Услуги → Подключение и обслуживание ККТ и торгового оборудования. `data-nav="services"`. CTA → `contacts.html?service=kkt-support`. В sitemap **есть**.
 
 ---
 
@@ -301,6 +413,8 @@ Hero (факт): текстовый `page-hero`. В меню **нет**; в site
 | `service-otchetnost.html` | **Сервисы 1С** | Продукты |
 | `service-its.html` | **Хаб услуг** «Обслуживание и сопровождение 1С» (не продукт ИТС) | Услуги |
 | `service-support.html` | Услуга | Услуги (не в dropdown) |
+| `service-update.html` | Услуга | Услуги (не в dropdown) |
+| `service-its-package.html` | **Сервисы 1С** (продукт 1С:КП/ИТС) | Продукты |
 | `service-customize.html` | Услуга | Услуги |
 | … | | |
 
@@ -378,9 +492,11 @@ Hero (факт): текстовый `page-hero`. В меню **нет**; в site
 
 ### Desktop / mobile menu (`components/menu.html`)
 
-7 пунктов верхнего уровня: Главная, О компании, Услуги (6 подпунктов), Продукты (4), Отрасли (6 + якорь), Новости, Контакты.
+7 пунктов верхнего уровня: Главная, О компании, Услуги (5 подпунктов), Продукты (**5** подпунктов), Отрасли (6 + якорь), Новости, Контакты.
 
-**В dropdown «Услуги» нет** `service-support.html`.
+**В dropdown «Услуги» нет:** `service-support`, `service-update`, `service-its-admin`, `service-its-tariffs`.
+
+**В dropdown «Продукты» нет:** `service-fresh`, `service-otchetnost`, `service-edo`, `service-epd`, `service-its-package` (вход с каталогов).
 
 ### Header (`components/header.html`)
 
@@ -390,7 +506,7 @@ Hero (факт): текстовый `page-hero`. В меню **нет**; в site
 
 ### Footer (`components/footer.html`)
 
-6 колонок: бренд, Компания, Отрасли, Услуги (6 ссылок), Продукты (4), Контакты.  
+6 колонок: бренд, Компания, Отрасли, Услуги (5 ссылок), Продукты (**5** ссылок), Контакты.  
 Копирайт 2003–2026, ИНН.
 
 ---
@@ -410,8 +526,37 @@ Hero (факт): текстовый `page-hero`. В меню **нет**; в site
 
 ### Форма (`contact-form.html`)
 
-Netlify Forms: имя*, email*, телефон, select (отрасли + услуги incl. `support-1c`), сообщение*.  
-Honeypot `bot-field`. POST через `main.js`.
+Netlify Forms: имя*, email*, телефон, select (отрасли + услуги + продукты), сообщение*.  
+Honeypot `bot-field`. POST через `main.js`. Preselect: `?service=VALUE` → `option[value]` (см. таблицу).
+
+#### Параметры `?service=` (актуально)
+
+| Value | Label в форме | Страницы с CTA (примеры) |
+|-------|---------------|--------------------------|
+| `its` | Обслуживание и сопровождение 1С | `service-its.html` |
+| `its-tariff` | Подобрать тариф сопровождения 1С | `service-its-tariffs.html` |
+| `its-package` | 1С:КП / 1С:ИТС | `service-its-package.html` |
+| `support-1c` | Сопровождение 1С | `service-support.html` |
+| `1c-admin-support` | Администрирование и техническая поддержка 1С | `service-its-admin.html` |
+| `update-1c` | Обновление 1С | `service-update.html` |
+| `consulting` | Линия консультаций | `line-consulting.html` |
+| `customize` | Внедрение 1С | *(option есть; CTA на странице **без** param — см. TODO)* |
+| `1cbo` | Бухгалтерское обслуживание | *(option есть; CTA **без** param — см. TODO)* |
+| `kkt-support` | Подключение и обслуживание ККТ… | `service-kkt.html` |
+| `programs` | Программы 1С | `catalog-programs.html` |
+| `program-buh` | 1С:Бухгалтерия 8 | `product-1c-buhgalteria.html` |
+| `program-zup` | 1С:Зарплата и управление персоналом 8 | `product-1c-zup.html` |
+| `program-ut` | 1С:Управление торговлей 8 | `product-1c-ut.html` |
+| `1c-services` | Сервисы 1С | `catalog-services.html` |
+| `norma` | Norma CS | `product-norma.html` |
+| `otchetnost` | 1С-Отчётность | *(option есть; CTA **без** param — см. TODO)* |
+| `edo` | 1С-ЭДО | `service-edo.html` |
+| `epd` | 1С-ЭПД | `service-epd.html` |
+| `fresh` | 1С:Фреш | *(option есть; CTA **без** param — см. TODO)* |
+| `kkt-product` | ККТ и онлайн-кассы | `product-kkt.html` |
+| `trade-equipment` | Торговое оборудование | `product-trade-equipment.html` |
+| `retail` … `mining` | Отрасли | отраслевые страницы, форма на главной |
+| `other` | Другое | — |
 
 ---
 
@@ -425,13 +570,23 @@ Honeypot `bot-field`. POST через `main.js`.
 
 **service-support:** CTA → `contacts.html?service=support-1c`.
 
----
+**service-update:** CTA → `contacts.html?service=update-1c`.
+
+**line-consulting:** CTA → `contacts.html?service=consulting`.
 
 ## 10. Архитектура ключевых страниц (сокращённо)
 
 ### service-its.html (целевое состояние)
 
-**Хаб** «Обслуживание и сопровождение 1С»: навигация к четырём сценариям (линия, обновление, сопровождение, 1С:КП/ИТС). Illustrated hero. *Фактический контент страницы ещё требует переработки под хаб.*
+**Хаб** «Обслуживание и сопровождение 1С»: четыре **услуги** (линия, обновление, сопровождение, администрирование). 1С:КП/ИТС — продукт в каталоге «Сервисы 1С».
+
+### service-its-package.html
+
+Продуктовая страница 1С:КП/ИТС: состав комплекта, роль ВИТ, связи с update/support/line. Без блока устаревших тарифов ВИТ.
+
+### service-update.html
+
+Page hero + направления обновления, сценарии, процесс, типовая/доработанная, связь с ИТС/КП (без тарифов), compare с сопровождением, FAQ, CTA. Breadcrumb через хаб.
 
 ### service-support.html
 
@@ -439,7 +594,13 @@ Page hero + секции: что такое сопровождение, типи
 
 ### catalog-programs.html
 
-Отдельный **`programs-hero`** (не стандартный page-hero) + `page-programs.css` + hero-programs picture.
+Отдельный **`programs-hero`** (не стандартный page-hero) + `page-programs.css` + hero-programs picture. Карточки **1С:Бухгалтерия**, **1С:ЗУП**, **1С:УТ** ведут на product landing pages; у УТ сохранена вторичная ссылка «Пример для опта» → `wholesale.html`.
+
+### product-1c-buhgalteria.html / product-1c-zup.html / product-1c-ut.html
+
+Единый шаблон **program-product-page** (8 секций): page-hero (текстовый), задачи, аудитория, редакции и цены лицензий 1С (`.program-license-grid`), блок ВИТ (работы отдельно от лицензии), related, FAQ, CTA. Scoped CSS в `pages.css`. **Не** подключают `page-programs.css`.
+
+**Модель цен:** на странице — рекомендованные розничные цены фирмы «1С» (август 2026); установка/настройка/перенос — отдельно. **Требует подтверждения:** входит ли простая первичная установка в приобретение лицензии у ВИТ.
 
 ### Отраслевые ×6
 
@@ -453,13 +614,13 @@ Page hero + секции: что такое сопровождение, типи
 
 ## 11. Sitemap и robots
 
-**sitemap.xml:** 25 URL; главная `https://vit-ltd.ru/`; **без** hero-concepts. После добавления страниц «Обновление 1С» и «1С:КП / ИТС» — расширить sitemap.
+**sitemap.xml:** **34** URL; главная `https://vit-ltd.ru/`; **без** hero-concepts и `norma-service.html` (301 → product-norma).
 
 **robots.txt:** `Sitemap: https://vit-ltd.ru/sitemap.xml`.
 
-**Canonical:** на всех 25 публичных страницах; главная → `https://vit-ltd.ru/`. DEV hero — `noindex, nofollow`.
+**Canonical:** на **34** production HTML-страницах с layout (+ legacy `norma-service.html`); главная → `https://vit-ltd.ru/`. DEV hero — `noindex, nofollow`. **Open Graph не реализован.**
 
-**Netlify:** `/` rewrite 200 → `pages/index.html`; `/pages/index.html` и `/index.html` → 301 → `/`.
+**Netlify:** `/` rewrite 200 → `pages/index.html`; `/pages/index.html` и `/index.html` → 301 → `/`; `norma-service` → 301 → `product-norma`.
 
 ---
 
@@ -485,20 +646,19 @@ Page hero + секции: что такое сопровождение, типи
 
 - Layout, навигация, footer, mobile menu
 - Главная с production Hero (hero-home) и bento-статистикой
-- 7 страниц услуг (в т.ч. service-support), 6 в меню
+- Хаб сопровождения 1С + 4 дочерние услуги + тарифы ВИТ + продукт 1С:КП/ИТС
+- Страницы 1С-ЭДО, 1С-ЭПД, NormaCS, ККТ, торговое оборудование
+- 6 услуг в меню + дочерние / продуктовые в sitemap
 - 6 отраслей с формами
-- Каталоги и часть product/detail pages
+- Каталоги программ и сервисов 1С
 - Illustrated heroes на ключевых страницах
-- Netlify forms, базовый SEO
+- Netlify forms, базовый SEO (canonical, sitemap, robots)
 
 ### Частично / финальный хвост
 
-- **Переработка `service-its.html` в хаб** (целевая IA зафиксирована, код — нет)
-- **Новые страницы:** «Обновление 1С», «1С:КП / 1С:ИТС»
-- Доработка `service-support`, `line-consulting` под целевые формулы
-- Norma CS, карточки программ без URL
-- Open Graph, домен production
-- Mobile/production QA
+- карточки программ без отдельных URL (landing конфигураций)
+- Open Graph, страница privacy policy
+- Mobile/production QA, CTA audit (gaps на fresh/otchetnost/1cbo/customize)
 - Декомпозиция pages.css — **после** стабилизации
 
 ### Выполнено (SEO / deployment)
@@ -522,11 +682,11 @@ Page hero + секции: что такое сопровождение, типи
 ## 14. Архитектурные замечания
 
 1. Fetch-компоненты требуют HTTP-сервера (не `file://`).
-2. `service-support` в sitemap, но не в menu — вход с хаба `service-its` и каталога.
+2. `service-support`, `service-update`, `line-consulting` в sitemap, но не в menu — вход с хаба `service-its`. `service-its-package` — вход с `catalog-services`.
 3. `hero-industries` asset без страницы — резерв или удалить позже.
 4. Кейсы в sitemap, скрыты из menu.
 5. Open Graph, карта на contacts — в backlog.
 
 ---
 
-*Документ синхронизирован с кодовой базой. Рабочий код сайта при обновлении этого файла не изменялся.*
+*Документ синхронизирован с кодовой базой (август 2026). Рабочий код сайта при обновлении этого файла не изменялся.*
